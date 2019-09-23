@@ -1,0 +1,34 @@
+package com.custom.utils.uberh3;
+
+/**
+ * Hello world!
+ *
+ */
+
+
+import java.io.InputStreamReader;
+import java.text.NumberFormat;
+import java.util.HashMap;
+import java.util.Properties;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import com.uber.h3
+import org.apache.hadoop.hive.ql.exec.UDF;
+
+public class Geo2H3 extends UDF{
+
+    public Text evaluate(Text lng, Text lat, Text deep) {
+        
+    }
+    public Geo2H3() throws Exception {
+    }
+
+}
+
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+    }
+}
