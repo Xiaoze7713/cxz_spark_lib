@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.uber:h3:3.4.2-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/uber/h3/3.4.2-SNAPSHOT/h3-3.4.2-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/uber/h3/3.4.2-SNAPSHOT/h3-3.4.2-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/uber/h3/3.4.2-SNAPSHOT/h3-3.4.2-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
