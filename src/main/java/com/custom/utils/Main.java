@@ -1,5 +1,4 @@
-package com.custom.utils.uberh3;
-import com.custom.utils.uberh3.InPolygonArea;
+package com.custom.utils;
 import com.uber.h3core.H3Core;
 import org.apache.hadoop.io.Text;
 

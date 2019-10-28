@@ -1,11 +1,10 @@
-package com.custom.utils.uberh3;
+package com.custom.utils;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.hadoop.hive.ql.exec.UDF;
 import com.uber.h3core.H3Core;
 import org.apache.hadoop.io.Text;
 
-import java.awt.*;
 import java.util.List;
 
 public class H3Neighbor extends UDF {

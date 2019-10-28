@@ -1,4 +1,4 @@
-package com.custom.utils.uberh3;
+package com.custom.util;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

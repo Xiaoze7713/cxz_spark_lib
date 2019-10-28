@@ -1,4 +1,4 @@
-package com.custom.utils.uberh3;
+package com.custom.utils;
 
 import com.uber.h3core.util.GeoCoord;
 import org.apache.hadoop.hive.ql.exec.UDF;

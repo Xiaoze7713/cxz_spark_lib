@@ -1,4 +1,4 @@
-package com.custom.utils.uberh3;
+package com.custom.utils;
 
 /**
  * Hello world!
@@ -6,17 +6,9 @@ package com.custom.utils.uberh3;
  */
 
 
-import java.io.InputStreamReader;
-import java.text.NumberFormat;
-import java.util.HashMap;
-import java.util.Properties;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import com.uber.h3core.H3Core;
 import org.apache.hadoop.hive.ql.exec.UDF;
 import org.apache.hadoop.io.Text;
-import org.apache.commons.lang.StringUtils;
-import org.json.Test;
 
 
 public class Geo2H3 extends UDF{

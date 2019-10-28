@@ -2,8 +2,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.custom.utils.uberh3</groupId>
-  <artifactId>uberh3</artifactId>
+  <groupId>com.custom.utils</groupId>
+  <artifactId>utils</artifactId>
   <version>2.0</version>
   <packaging>jar</packaging>
 
@@ -24,6 +24,7 @@
     <dependency>
         <groupId>org.apache.hive</groupId>
         <artifactId>hive-exec</artifactId>
+        <!--version>3.1.0</version-->
         <version>0.13.0</version>
     </dependency>
     <dependency>
