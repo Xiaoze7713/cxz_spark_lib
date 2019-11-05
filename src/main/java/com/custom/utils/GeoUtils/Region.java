@@ -38,8 +38,8 @@ public class Region {
     private Region() throws Exception {
         try {
             //private static String filePath = "hdfs://zjxl-nameservice/user/h_sunmingze/jar/udf/code_region.txt";
-            String filePath = "./code_region.txt";
-            BufferedReader reader = new BufferedReader(new FileReader(new File(filePath)));
+            String filePath = "code_region.txt";
+            BufferedReader reader = new BufferedReader(new FileReader(filePath));
             String tmp ;
             while ((tmp = reader.readLine()) != null) {
                 Info info = new Info();
