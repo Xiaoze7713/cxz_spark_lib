@@ -9,9 +9,8 @@
         <module name="utils" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="uberh3" target="1.5" />
-      <module name="utils" target="1.5" />
+    <bytecodeTargetLevel target="8">
+      <module name="utils" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

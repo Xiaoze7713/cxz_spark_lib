@@ -7,11 +7,10 @@
   <version>2.0</version>
   <packaging>jar</packaging>
 
-  <name>uberh3</name>
-  <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>8</maven.compiler.source>
+    <maven.compiler.target>8</maven.compiler.target>
   </properties>
 
   <dependencies>
@@ -35,7 +34,7 @@
     <dependency>
         <groupId>com.uber</groupId>
         <artifactId>h3</artifactId>
-        <version>3.4.2-SNAPSHOT</version>
+        <version>3.6.4</version>
 	</dependency>
 
   </dependencies>
