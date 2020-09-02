@@ -3,9 +3,7 @@ package com.custom.utils.Company;
 import com.custom.utils.Algorithm.EditDistance;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.function.Function;
 
 public class CompanyKeyWord {
     public static ArrayList<String> companyKey;
@@ -38,7 +36,7 @@ public class CompanyKeyWord {
             for (String k : companyKey) {
                 int dis = EditDistance.GetEditDistance(k, w);
                 if (dis < minDis && dis <= k.length() / 2) {
-                    best = w;
+                    best = k;
                     minDis = dis;
                 }
             }

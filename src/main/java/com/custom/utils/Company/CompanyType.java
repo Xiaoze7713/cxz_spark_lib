@@ -39,7 +39,7 @@ public class CompanyType {
             int minDis = 99;
             for (String k : companyTypeToCode.keySet()) {
                 int dis = EditDistance.GetEditDistance(k, w);
-                if (dis < minDis && dis <= w.length() / 2) {
+                if (dis < minDis && dis <= k.length() / 2) {
                     best = k;
                     minDis = dis;
                 }
