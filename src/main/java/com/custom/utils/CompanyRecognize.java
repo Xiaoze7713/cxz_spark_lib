@@ -19,6 +19,6 @@ public class CompanyRecognize extends UDF {
         if (matchInfo.size() == 2) {
             return new Text(matchInfo.get(0) + "," + matchInfo.get(1));
         }
-        return new Text("");
+        return new Text(companyName + ",");
     }
 }

@@ -23,7 +23,7 @@ public class CompanyKeyWord {
         companyKey.add("GROUP");
         companyKey.add("CO.");
         companyKey.add("LTD.");
-        companyKey.add("General");
+        companyKey.add("GENERAL");
     }
     public static final int keyLikeLimit  = 3;
     public static ArrayList<String> MatchCompanyKeyWord(String companyName) {

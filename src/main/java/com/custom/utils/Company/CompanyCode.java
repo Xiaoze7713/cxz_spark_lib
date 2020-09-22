@@ -5,18 +5,18 @@ import java.util.HashMap;
 public class CompanyCode {
     public enum Code {
         COMPANY_NONE,
+        FUND_GROUP,
+        LLLC,
         LLC,
         INC,
         LP,
         LLP,
         LLLP,
-        LLLC,
         PLLC,
         CO,
         LC,
         PLC,
         SARL,
-        FUND_GROUP,
         PA,
         PL,
         SA

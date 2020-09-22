@@ -12,6 +12,7 @@ public class CompanyType {
         companyTypeToCode.put("LLC", CompanyCode.Code.LLC);
         companyTypeToCode.put("INC.", CompanyCode.Code.INC);
         companyTypeToCode.put("L.P.", CompanyCode.Code.LP);
+        companyTypeToCode.put("LP", CompanyCode.Code.LP);
         companyTypeToCode.put("LLP", CompanyCode.Code.LLP);
         companyTypeToCode.put("LLLP", CompanyCode.Code.LLLP);
         companyTypeToCode.put("LLLC", CompanyCode.Code.LLLC);
@@ -34,6 +35,8 @@ public class CompanyType {
         ArrayList<String> keyWords = new ArrayList<>();
         ArrayList<String> otherWords = new ArrayList<>();
         String[] wordList = companyName.split(" ");
+        int gMinDis = 99;
+        String gBestW = "";
         for (String w : wordList) {
             String best = "";
             int minDis = 99;
@@ -44,8 +47,9 @@ public class CompanyType {
                     minDis = dis;
                 }
             }
-            if(minDis <= companyTypeLikeLimit ) {
-                keyWords.add(best);
+            if(minDis <= companyTypeLikeLimit && minDis < gMinDis) {
+                gMinDis = minDis;
+                gBestW = best;
             } else {
                 otherWords.add(w);
             }
@@ -53,8 +57,11 @@ public class CompanyType {
         keyWords.sort(String::compareTo);
         ArrayList<String> result = new ArrayList<>();
         result.add(String.join(" ", otherWords));
-        if (keyWords.size() > 0) {
-            result.add(String.join(";", keyWords));
+//        if (keyWords.size() > 0) {
+//            result.add(String.join(";", keyWords));
+//        }
+        if (!gBestW.equals("")) {
+            result.add(gBestW);
         }
         return result;
     }

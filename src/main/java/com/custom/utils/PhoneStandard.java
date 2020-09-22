@@ -11,7 +11,9 @@ public class PhoneStandard extends UDF {
 
 
     public Text evaluate(Text text) {
-        return text;
+        String s = text.toString();
+        String res = Standard(s);
+        return new Text(res);
     }
     public static String Standard(String s) {
         s = s.replace("/", " ");
@@ -21,6 +23,15 @@ public class PhoneStandard extends UDF {
         s = s.replace(".", " ");
         ArrayList<ArrayList<String> > splitStrings = (ArrayList<ArrayList<String> > )Arrays.stream(s.split(" "))
                 .filter(x -> !x.equals(""))
+                .filter(x -> {
+                    for (int i = 0; i < x.length(); i ++) {
+                        if ((x.charAt(i) >= 'A' && x.charAt(i) <= 'Z') ||
+                            (x.charAt(i) >= 'a' && x.charAt(i) <= 'z')) {
+                            return false;
+                        }
+                    }
+                    return true;
+                })
                 .map(x -> {
                     String[] splitStrList = x.length() > 5 && x.length() <=9 ? new String[]{x.substring(0, 4), x.substring(4)}:new String[]{x,};
                     return new ArrayList<String>(Arrays.asList(splitStrList));
@@ -37,7 +48,7 @@ public class PhoneStandard extends UDF {
         } else if (f.size() == 4) {
             res = "+" + f.get(0) + " " + String.join("", f.subList(1, f.size()));
         } else if (f.get(0).charAt(0) == '1') {
-            res = "+1 " + f.get(0).substring(1,f.size()) + String.join("", f.subList(1,f.size()));
+            res = "+1 " + f.get(0).substring(1) + String.join("", f.subList(1,f.size()));
         } else {
             res = "+1 " + String.join("", f);
         }
